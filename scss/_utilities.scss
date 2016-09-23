@@ -1,0 +1,54 @@
+//Clears the float from any element
+%clearfix {
+  &:before, &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+//Floats
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+//Text alignments
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-left {
+  text-align: left;
+}
+
+//Vertical align
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//Flex center
+
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -96,3 +96,105 @@ table {
  * 
  * Designed and built @kurenn  
  */
+.row {
+  display: block; }
+  .row .col-1 {
+    width: 8.33333%; }
+  .row .col-2 {
+    width: 16.66667%; }
+  .row .col-3 {
+    width: 25%; }
+  .row .col-4 {
+    width: 33.33333%; }
+  .row .col-5 {
+    width: 41.66667%; }
+  .row .col-6 {
+    width: 50%; }
+  .row .col-7 {
+    width: 58.33333%; }
+  .row .col-8 {
+    width: 66.66667%; }
+  .row .col-9 {
+    width: 75%; }
+  .row .col-10 {
+    width: 83.33333%; }
+  .row .col-11 {
+    width: 91.66667%; }
+  .row .col-12 {
+    width: 100%; }
+  .row .offset-1 {
+    margin-left: 8.33333%; }
+  .row .offset-2 {
+    margin-left: 16.66667%; }
+  .row .offset-3 {
+    margin-left: 25%; }
+  .row .offset-4 {
+    margin-left: 33.33333%; }
+  .row .offset-5 {
+    margin-left: 41.66667%; }
+  .row .offset-6 {
+    margin-left: 50%; }
+  .row .offset-7 {
+    margin-left: 58.33333%; }
+  .row .offset-8 {
+    margin-left: 66.66667%; }
+  .row .offset-9 {
+    margin-left: 75%; }
+  .row .offset-10 {
+    margin-left: 83.33333%; }
+  .row .offset-11 {
+    margin-left: 91.66667%; }
+  .row .offset-12 {
+    margin-left: 100%; }
+
+[class*="col-"] {
+  float: left; }
+
+@media only screen and (max-width: 768px) {
+  .row > [class*="col-"] {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 2px;
+    padding-right: 0;
+    padding-left: 0; }
+  [class*="offset-"] {
+    margin-left: 0; } }
+
+.row:before, .row:after {
+  display: table;
+  content: ""; }
+
+.row:after {
+  clear: both; }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
+.text-left {
+  text-align: left; }
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.flex-center {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center; }
