@@ -102,3 +102,19 @@ body {
 .media-queries span {
   color: #4A4A4A;
   margin-left: 1rem; }
+
+.responsive table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%; }
+
+.responsive td, .responsive th {
+  border: 1px solid #FAFAFA;
+  text-align: left;
+  padding: 8px; }
+
+.responsive tr:nth-child(even) {
+  background-color: #FAFAFA; }
+
+.bold {
+  font-weight: 700; }
