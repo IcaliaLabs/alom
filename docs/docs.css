@@ -63,20 +63,24 @@ body {
     margin: 1rem; }
 
 .grid,
-.utilities {
+.utilities,
+.media-queries {
   border-bottom: 1px solid #DEDEDE;
   padding: 5rem 0 5rem 0; }
   .grid h4,
-  .utilities h4 {
+  .utilities h4,
+  .media-queries h4 {
     color: #4A90E2;
     font-weight: 400;
     margin-bottom: 1rem; }
   .grid p,
-  .utilities p {
+  .utilities p,
+  .media-queries p {
     margin-bottom: 3rem;
     line-height: 2; }
   .grid .docs-col,
-  .utilities .docs-col {
+  .utilities .docs-col,
+  .media-queries .docs-col {
     border: 1px solid #4A90E2;
     margin: .5rem;
     padding: 1rem; }
@@ -91,3 +95,10 @@ body {
   margin-left: 1rem;
   height: 8rem;
   text-align: center; }
+
+.media-queries h4 {
+  line-height: 1.5; }
+
+.media-queries span {
+  color: #4A4A4A;
+  margin-left: 1rem; }

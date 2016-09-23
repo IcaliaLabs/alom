@@ -164,6 +164,54 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="media-queries" id="media-queries">
+				<h3 class="title">Media Queries</h3>
+				<p>We have provided a set of helpful media query mixins with really cool names. Kudos to Rafal Bromirski. We have one for Mobile and Tablet so it's easier for you to manage those screens.</p>
+
+				<div class="row">
+					<div class="col-6">
+						<h3 class="subtitle text-left">Example of Mobile Full media</h3>
+						<div class="example-col text-left">
+							<h4>
+								@media only screen and (min-width: 320px) and (max-width: 480px) { <br>
+									<span>//Your set of rules</span> <br>
+								}
+							</h4>
+						</div>
+					</div>
+					<div class="col-6">
+						<h3 class="subtitle text-left">Our Mobile mixin</h3>
+						<div class="example-col text-left">
+							<h4>
+								.class-name { <br>
+	    							<span>//Regular css rules</span> <br>
+	    						<br>
+					    		<span>@include phone { </span><br>
+					      	<span>//Your awesome responsive rules. Cool isn't it?</span> <br>
+					    		<span>}</span> <br>
+	  						} 
+	  					</h4>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<h3 class="subtitle text-left">Our Tablet mixin</h3>
+						<div class="example-col text-left">
+							<h4>
+								.class-name { <br>
+	    							<span>//Regular css rules</span> <br>
+	    						<br>
+					    		<span>@include tablet { </span><br>
+					      	<span>//Your awesome responsive rules. Cool isn't it?</span> <br>
+					    		<span>}</span> <br>
+	  						} 
+	  					</h4>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 	</body>
 </html>

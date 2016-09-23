@@ -90,7 +90,8 @@ body {
 }
 
 .grid,
-.utilities {
+.utilities,
+.media-queries {
 	border-bottom: 1px solid #DEDEDE;
 	padding: 5rem 0 5rem 0;
 
@@ -123,5 +124,16 @@ body {
 		margin-left: 1rem;
 		height: 8rem;
 		text-align: center;
+	}
+}
+
+.media-queries {
+	h4 {
+		line-height: 1.5;
+	}
+
+	span {
+		color: $text-color;
+		margin-left: 1rem;
 	}
 }
