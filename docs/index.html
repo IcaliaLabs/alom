@@ -4,12 +4,14 @@
 		<title>Alom</title>
 		<link rel="stylesheet" type="text/css" href="alom.css">
 		<link rel="stylesheet" href="docs.css">
+		<link rel="stylesheet" href="animate.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script type="text/javascript" src="scroll.js"></script>
+		<script type="text/javascript" src="js/scroll.js"></script>
+		 <script src="js/wow.min.js"></script>
 	</head>
 	<body>
-		<header class="main-header">
+		<header class="main-header wow animated bounceInDown">
 			<div class="container main-header__container">
 				<a href="/">alom</a>
 				<nav class="main-nav">
@@ -20,18 +22,20 @@
 		</header>
 		<div class="container text-center">
 			<section class="main-section">
-				<h3>alom</h3>
-				<h1>The lightest, simplest framework ever.</h1>		
+				<div class="wow animated fadeIn">
+					<h3>alom</h3>
+					<h1>The lightest, simplest framework ever.</h1>	
+				</div>	
 				<div class="row">
-					<div class="col-4">
+					<div class="col-4 wow animated fadeIn" data-wow-delay=".3s">
 						<img class="icons" src="images/fast-icon.png" alt="">
 						<h4>Super fast, like the speed of light</h4>
 					</div>
-					<div class="col-4">
+					<div class="col-4 wow animated fadeIn" data-wow-delay=".6s">
 						<img class="icons" src="images/grid-icon.png" alt="">
 						<h4>Super simple respinsive grid</h4>
 					</div>
-					<div class="col-4">
+					<div class="col-4 wow animated fadeIn" data-wow-delay=".9s">
 						<img class="icons" src="images/non-style.png" alt="">
 						<h4>It doesn’t interfere with your style.</h4>
 					</div>
@@ -46,7 +50,7 @@
 					<a href="#responsive">Responsive</a>
 				</nav>
 			</div>
-			
+
 			<section class="grid" id="grid">
 				<h3 class="title">The grid</h3>
 				<p>We use Furattos'fluid system which scales up to 12 columns. You don't need much to start it up, the only thing you need to do is to nest each column (.col-1, .col-2, etc.) inside a div with class ".row".</p>
@@ -289,5 +293,8 @@
 				</div>
 			</section>
 		</div>
+		<script>
+      new WOW().init();
+     </script>
 	</body>
 </html>

@@ -76,23 +76,27 @@ body {
 
 .grid,
 .utilities,
-.media-queries {
+.media-queries,
+.responsive {
   border-bottom: 1px solid #DEDEDE;
   padding: 5rem 0 5rem 0; }
   .grid h4,
   .utilities h4,
-  .media-queries h4 {
+  .media-queries h4,
+  .responsive h4 {
     color: #4A90E2;
     font-weight: 400;
     margin-bottom: 1rem; }
   .grid p,
   .utilities p,
-  .media-queries p {
+  .media-queries p,
+  .responsive p {
     margin-bottom: 3rem;
     line-height: 2; }
   .grid .docs-col,
   .utilities .docs-col,
-  .media-queries .docs-col {
+  .media-queries .docs-col,
+  .responsive .docs-col {
     border: 1px solid #4A90E2;
     margin: .5rem;
     padding: 1rem; }
