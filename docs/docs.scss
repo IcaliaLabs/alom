@@ -84,8 +84,14 @@ body {
 	transition: all .5s ease-in-out;
 	a {
 		color: white;
+		cursor: pointer;
 		font-size: 1.2rem;
-		margin: 1rem;
+		padding: 1rem;
+		transition: all .3s ease-in-out;
+
+		&:hover {
+			color: $text-color;
+		}
 	}
 }
 

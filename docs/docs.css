@@ -59,8 +59,13 @@ body {
   transition: all .5s ease-in-out; }
   .secondary-nav a {
     color: white;
+    cursor: pointer;
     font-size: 1.2rem;
-    margin: 1rem; }
+    padding: 1rem;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+    .secondary-nav a:hover {
+      color: #4A4A4A; }
 
 .nav-wrap {
   -webkit-transition: all .5s ease-in-out;
