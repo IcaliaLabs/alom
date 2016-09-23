@@ -45,6 +45,11 @@ body {
 	a {
 		color: $main-color;
 		margin-right: 1rem;
+		transition: all .3 ease-in-out;
+
+		&:hover {
+			color: $text-color;
+		}
 	}
 }
 
@@ -113,7 +118,8 @@ body {
 .grid,
 .utilities,
 .media-queries,
-.responsive {
+.responsive,
+.download {
 	border-bottom: 1px solid #DEDEDE;
 	padding: 5rem 0 5rem 0;
 
@@ -180,4 +186,22 @@ body {
 
 .bold {
 	font-weight: 700;
+}
+
+.download {
+	border-bottom: none;
+}
+
+.btn {
+	border: 1px solid $main-color;
+	border-radius: 10rem;
+	color: $main-color;
+	cursor: pointer;
+	padding: 2rem 3rem;
+	transition: all .3s ease-in-out;
+
+	&:hover {
+		background: $main-color;
+		color: white;
+	}
 }

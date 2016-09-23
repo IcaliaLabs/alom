@@ -29,7 +29,11 @@ body {
 
 .main-header a {
   color: #4A90E2;
-  margin-right: 1rem; }
+  margin-right: 1rem;
+  -webkit-transition: all .3 ease-in-out;
+  transition: all .3 ease-in-out; }
+  .main-header a:hover {
+    color: #4A4A4A; }
 
 .main-section {
   height: 100vh;
@@ -82,26 +86,30 @@ body {
 .grid,
 .utilities,
 .media-queries,
-.responsive {
+.responsive,
+.download {
   border-bottom: 1px solid #DEDEDE;
   padding: 5rem 0 5rem 0; }
   .grid h4,
   .utilities h4,
   .media-queries h4,
-  .responsive h4 {
+  .responsive h4,
+  .download h4 {
     color: #4A90E2;
     font-weight: 400;
     margin-bottom: 1rem; }
   .grid p,
   .utilities p,
   .media-queries p,
-  .responsive p {
+  .responsive p,
+  .download p {
     margin-bottom: 3rem;
     line-height: 2; }
   .grid .docs-col,
   .utilities .docs-col,
   .media-queries .docs-col,
-  .responsive .docs-col {
+  .responsive .docs-col,
+  .download .docs-col {
     border: 1px solid #4A90E2;
     margin: .5rem;
     padding: 1rem; }
@@ -139,3 +147,18 @@ body {
 
 .bold {
   font-weight: 700; }
+
+.download {
+  border-bottom: none; }
+
+.btn {
+  border: 1px solid #4A90E2;
+  border-radius: 10rem;
+  color: #4A90E2;
+  cursor: pointer;
+  padding: 2rem 3rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+  .btn:hover {
+    background: #4A90E2;
+    color: white; }
