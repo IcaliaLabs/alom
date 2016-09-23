@@ -89,6 +89,21 @@ body {
 	}
 }
 
+.nav-wrap {
+	transition: all .5s ease-in-out;
+}
+
+.sticky {
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	.secondary-nav {
+		padding: .5rem;
+	}
+}
+
 .grid,
 .utilities,
 .media-queries {
