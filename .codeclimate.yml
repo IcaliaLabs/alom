@@ -10,3 +10,4 @@ ratings:
 exclude_paths:
 - dist/
 - "scripts/jquery-3.1.0.min.js"
+- "gulpfile.coffee"
