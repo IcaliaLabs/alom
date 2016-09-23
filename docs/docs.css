@@ -62,17 +62,32 @@ body {
     font-size: 1.2rem;
     margin: 1rem; }
 
-.grid {
+.grid,
+.utilities {
   border-bottom: 1px solid #DEDEDE;
   padding: 5rem 0 5rem 0; }
-  .grid h4 {
+  .grid h4,
+  .utilities h4 {
     color: #4A90E2;
     font-weight: 400;
     margin-bottom: 1rem; }
-  .grid p {
+  .grid p,
+  .utilities p {
     margin-bottom: 3rem;
     line-height: 2; }
-  .grid .docs-col {
+  .grid .docs-col,
+  .utilities .docs-col {
     border: 1px solid #4A90E2;
     margin: .5rem;
     padding: 1rem; }
+
+.example-col {
+  background: #FAFAFA;
+  margin-right: 1rem;
+  padding: 1rem; }
+
+.utilities .example-col {
+  margin-right: 0;
+  margin-left: 1rem;
+  height: 8rem;
+  text-align: center; }
