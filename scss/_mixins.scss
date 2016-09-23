@@ -19,27 +19,6 @@
   }
 }
 
-@mixin inline-block {
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-}
-
-@mixin center-block {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@mixin hyphens($mode: auto) {
-  word-wrap: break-word;
-  -webkit-hyphens: $mode;
-  -moz-hyphens: $mode;
-  -ms-hyphens: $mode; // IE10+
-  -o-hyphens: $mode;
-  hyphens: $mode;
-}
-
 //Credits to bootstrap
 @mixin responsive-invisibility {
   display: none !important;
@@ -64,60 +43,11 @@
     display: table-cell !important;
   }
 }
-@mixin opacity ( $opacity ) {
-  opacity: $opacity;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" $opacity * 100 ")";
-  filter: alpha(opacity= $opacity* 100 );
-  zoom: 1;
-}
-
 
 @mixin img-responsive {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-// FORMS
-// --------------------------------------------------
-
-// Block level inputs
-@mixin input-block-level {
-  display: block;
-  width: 100%;
-  min-height: $input-height; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  @include box-sizing(border-box); // Makes inputs behave like true block-level elements
-}
-
-@mixin dropdown-arrow($color: $select-options-bg, $top: 5px, $left: 15px, $size: 9px) {
-
-  &:before {
-    content: '';
-    border-style: solid;
-    border-width: 0 $size $size $size;
-    border-color: transparent transparent $color transparent;
-    height: 0px;
-    position: absolute;
-    left: $left;
-    top: $top;
-    width: 0px;
-    // Make corners smooth
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@mixin nav-divider($top: #e5e5e5, $bottom: #FFF) {
-  // IE7 needs a set width since we gave a height. Restricting just
-  // to IE7 to keep the 1px left/right space in other browsers.
-  // It is unclear where IE is getting the extra space that we need
-  // to negative-margin away, but so it goes.
-  *width: 100%;
-  height: 1px;
-  margin: (($base-line-height / 2) - 1) 1px; // 8px 1px
-  *margin: -5px 0 5px;
-  overflow: hidden;
-  background-color: $top;
-  border-bottom: 1px solid $bottom;
 }
 
 @mixin touch-callout {
