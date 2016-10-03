@@ -1,4 +1,5 @@
 @import 'mediaqueries';
+@import 'functions';
 
 //docs variables
 
@@ -17,7 +18,7 @@ body {
 
 .container {
 	margin: 0 auto;
-	padding: 3rem;
+	padding: px-to-rems(60);
 	width: 80%;
 
 	@include phone {
@@ -28,19 +29,19 @@ body {
 
 .title {
 	color: $main-color;
-	margin-bottom: 2rem;
-	font-size: 2rem;
+	margin-bottom: px-to-rems(32);
+	font-size: px-to-rems(32);
 }
 
 .subtitle {
 	color: $main-color;
 	font-size: 1.5rem;
-	margin-bottom: 2rem;
+	margin-bottom: px-to-rems(32);
 }
 
 .main-header {
 	.container {
-		padding: 2rem;
+		padding: px-to-rems(32);
 	}
 	a {
 		color: $main-color;
@@ -59,39 +60,39 @@ body {
 
 	h3 {
 		color: $main-color;
-		font-size: 2rem;
+		font-size: px-to-rems(32);
 		margin-bottom: 3rem;
 	}
 
   h1 {
-  	font-size: 2.5rem;
-  	margin-bottom: 15rem;
+  	font-size: px-to-rems(40);
+  	margin-bottom: px-to-rems(240);
   	font-weight: 300;
 
   	@include phone {
-  		margin-bottom: 3rem;
+  		margin-bottom: px-to-rems(45);
   	}
   }
 
   .icons {
-		height: 3rem;
-		margin-bottom: 2rem;
+		height: px-to-rems(50);
+		margin-bottom: px-to-rems(32);
 
 		@include phone {
-			margin-bottom: 1rem;
+			margin-bottom: px-to-rems(20);
 		}
 	}
 }
 
 .secondary-nav {
 	background: $main-color;
-	padding: 1rem;
+	padding: px-to-rems(20);
 	transition: all .5s ease-in-out;
 	a {
 		color: white;
 		cursor: pointer;
-		font-size: 1.2rem;
-		padding: 1rem;
+		font-size: px-to-rems(18);
+		padding: px-to-rems(15);
 		transition: all .3s ease-in-out;
 
 		&:hover {
@@ -111,7 +112,7 @@ body {
 	width: 100%;
 
 	.secondary-nav {
-		padding: .5rem;
+		padding: px-to-rems(10);
 	}
 }
 
@@ -121,29 +122,29 @@ body {
 .responsive,
 .download {
 	border-bottom: 1px solid #DEDEDE;
-	padding: 5rem 0 5rem 0;
+	padding: px-to-rems(80) 0 px-to-rems(80) 0;
 
 	h4 {
 		color: $main-color;
 		font-weight: 400;
-		margin-bottom: 1rem;
+		margin-bottom: px-to-rems(18);
 	}
 	p {
-		margin-bottom: 3rem;
+		margin-bottom: px-to-rems(40);
 		line-height: 2;
 	}
 
 	.docs-col {
 		border: 1px solid $main-color;
-		margin: .5rem;
-		padding: 1rem;
+		margin: px-to-rems(10);
+		padding: px-to-rems(18);
 	}
 }
 
 .example-col {
 	background: #FAFAFA;
-	margin-right: 1rem;
-	padding: 1rem;
+	margin-right: px-to-rems(18);
+	padding: px-to-rems(18);
 }
 
 .utilities {
@@ -162,7 +163,7 @@ body {
 
 	span {
 		color: $text-color;
-		margin-left: 1rem;
+		margin-left: px-to-rems(18);
 	}
 }
 
@@ -176,7 +177,7 @@ body {
 	td, th {
 	    border: 1px solid #FAFAFA;
 	    text-align: left;
-	    padding: 8px;
+	    padding: px-to-rems(8);
 	}
 
 	tr:nth-child(even) {
@@ -197,7 +198,7 @@ body {
 	border-radius: 10rem;
 	color: $main-color;
 	cursor: pointer;
-	padding: 2rem 3rem;
+	padding: px-to-rems(32) px-to-rems(40);
 	transition: all .3s ease-in-out;
 
 	&:hover {

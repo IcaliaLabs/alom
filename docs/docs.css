@@ -7,7 +7,7 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 3rem;
+  padding: 3.75rem;
   width: 80%; }
   @media only screen and (min-width: 320px) and (max-width: 480px) {
     .container {
@@ -48,24 +48,24 @@ body {
     font-weight: 300; }
     @media only screen and (min-width: 320px) and (max-width: 480px) {
       .main-section h1 {
-        margin-bottom: 3rem; } }
+        margin-bottom: 2.8125rem; } }
   .main-section .icons {
-    height: 3rem;
+    height: 3.125rem;
     margin-bottom: 2rem; }
     @media only screen and (min-width: 320px) and (max-width: 480px) {
       .main-section .icons {
-        margin-bottom: 1rem; } }
+        margin-bottom: 1.25rem; } }
 
 .secondary-nav {
   background: #4A90E2;
-  padding: 1rem;
+  padding: 1.25rem;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out; }
   .secondary-nav a {
     color: white;
     cursor: pointer;
-    font-size: 1.2rem;
-    padding: 1rem;
+    font-size: 1.125rem;
+    padding: 0.9375rem;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out; }
     .secondary-nav a:hover {
@@ -81,7 +81,7 @@ body {
   top: 0;
   width: 100%; }
   .sticky .secondary-nav {
-    padding: .5rem; }
+    padding: 0.625rem; }
 
 .grid,
 .utilities,
@@ -97,13 +97,13 @@ body {
   .download h4 {
     color: #4A90E2;
     font-weight: 400;
-    margin-bottom: 1rem; }
+    margin-bottom: 1.125rem; }
   .grid p,
   .utilities p,
   .media-queries p,
   .responsive p,
   .download p {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     line-height: 2; }
   .grid .docs-col,
   .utilities .docs-col,
@@ -111,13 +111,13 @@ body {
   .responsive .docs-col,
   .download .docs-col {
     border: 1px solid #4A90E2;
-    margin: .5rem;
-    padding: 1rem; }
+    margin: 0.625rem;
+    padding: 1.125rem; }
 
 .example-col {
   background: #FAFAFA;
-  margin-right: 1rem;
-  padding: 1rem; }
+  margin-right: 1.125rem;
+  padding: 1.125rem; }
 
 .utilities .example-col {
   margin-right: 0;
@@ -130,7 +130,7 @@ body {
 
 .media-queries span {
   color: #4A4A4A;
-  margin-left: 1rem; }
+  margin-left: 1.125rem; }
 
 .responsive table {
   font-family: arial, sans-serif;
@@ -140,7 +140,7 @@ body {
 .responsive td, .responsive th {
   border: 1px solid #FAFAFA;
   text-align: left;
-  padding: 8px; }
+  padding: 0.5rem; }
 
 .responsive tr:nth-child(even) {
   background-color: #FAFAFA; }
@@ -156,7 +156,7 @@ body {
   border-radius: 10rem;
   color: #4A90E2;
   cursor: pointer;
-  padding: 2rem 3rem;
+  padding: 2rem 2.5rem;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out; }
   .btn:hover {
