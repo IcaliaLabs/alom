@@ -6,6 +6,12 @@ exclude:
   - 'node_modules/**'
 
 linters:
+  VendorPrefix:
+    exclude:
+      - 'scss/_mixins.scss'
+  ImportantRule:
+    exclude:
+      - 'scss/_mixins.scss'
   BorderZero:
     enabled: false
   Indentation:
