@@ -1,11 +1,12 @@
 //Clears the float from any element
 %clearfix {
-  &:before, &:after {
+  &::before,
+  &::after {
+    content: '';
     display: table;
-    content: "";
   }
 
-  &:after {
+  &::after {
     clear: both;
   }
 }
@@ -47,8 +48,8 @@
 
 //Flex center
 
-.flex-center{
-  display: flex;
+.flex-center {
   align-items: center;
+  display: flex;
   justify-content: center;
 }
