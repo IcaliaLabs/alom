@@ -1,0 +1,77 @@
+//Grid
+
+//@variables
+//
+
+//Grid settings
+$number-of-columns: 12 !default;
+$offset-columns: $number-of-columns !default;
+$column-separation-factor: 0.1833 !default;
+
+//Row config
+$row-text-rendering: optimizespeed !default;
+$row-next-to-row-separation: 0.14285714rem !default;
+
+//Stack columns
+$stack-column-separation: 2px !default;
+$stack-column-padding-right: 0 !default;
+$stack-column-padding-left: 0 !default;
+
+//Media
+$grid-max-width: 768px !default;
+
+//
+//@mixin
+//
+@mixin grid-columns($columns: $number-of-columns) {
+  $column-width: 100 / $columns;
+
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      width: percentage(($column-width * $i) / 100);
+    }
+  }
+}
+
+//
+//@mixin
+//
+@mixin grid-columns-offset($columns: $offset-columns) {
+  $column-width: 100 / $columns;
+
+  @for $i from 1 through $columns {
+    .offset-#{$i} {
+      margin-left: percentage(($column-width * $i) / 100);
+    }
+  }
+
+}
+
+.row {
+  @extend %clearfix;
+  display: block;
+
+  //Columns
+  @include grid-columns;
+  @include grid-columns-offset;
+}
+
+//Borders and paddings are applied inside the div element
+//This prevents the columns to stack by a border or padding
+[class*="col-"] {
+  float: left;
+}
+
+@include max-screen($grid-max-width) {
+  .row > [class*="col-"] {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: $stack-column-separation;
+    padding-right: $stack-column-padding-right;
+    padding-left: $stack-column-padding-left;
+  }
+
+  [class*="offset-"] {
+    margin-left: 0; 
+  }
+}

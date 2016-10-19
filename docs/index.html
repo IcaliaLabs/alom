@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Alom</title>
+		<link rel="stylesheet" type="text/css" href="alom.css">
+		<link rel="stylesheet" href="docs.css">
+		<link rel="stylesheet" href="animate.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/scroll.js"></script>
+		 <script src="js/wow.min.js"></script>
+	</head>
+	<body>
+		<header class="main-header wow animated bounceInDown">
+			<div class="container main-header__container">
+				<a href="/">alom</a>
+				<nav class="main-nav">
+					<a href="#nav-wrap">Docs</a>
+					<a href="https://github.com/IcaliaLabs/alom" target="_blank">Github</a>
+				</nav>
+			</div>
+		</header>
+		<div class="container text-center">
+			<section class="main-section">
+				<div class="wow animated fadeIn">
+					<h3>alom</h3>
+					<h1>The lightest, simplest framework ever.</h1>	
+				</div>	
+				<div class="row">
+					<div class="col-4 wow animated fadeIn" data-wow-delay=".3s">
+						<img class="icons" src="images/fast-icon.png" alt="">
+						<h4>Super fast, like the speed of light</h4>
+					</div>
+					<div class="col-4 wow animated fadeIn" data-wow-delay=".6s">
+						<img class="icons" src="images/grid-icon.png" alt="">
+						<h4>Super simple respinsive grid</h4>
+					</div>
+					<div class="col-4 wow animated fadeIn" data-wow-delay=".9s">
+						<img class="icons" src="images/non-style.png" alt="">
+						<h4>It doesn’t interfere with your style.</h4>
+					</div>
+				</div>
+			</section>
+
+			<div class="nav-wrap" id="nav-wrap">
+				<nav class="secondary-nav">
+					<a href="#grid">Grid</a>
+					<a href="#utilities">Utility Classes</a>
+					<a href="#media-queries">Media Queries</a>
+					<a href="#responsive">Responsive</a>
+					<a href="#download">Download</a>
+				</nav>
+			</div>
+
+			<section class="grid" id="grid">
+				<h3 class="title">The grid</h3>
+				<p>We use Furattos'fluid system which scales up to 12 columns. You don't need much to start it up, the only thing you need to do is to nest each column (.col-1, .col-2, etc.) inside a div with class ".row".</p>
+				<p>You can algo nest rows inside existing .col-* columns.</p>
+				<div class="row">
+					<div class="col-4">
+						<div class="docs-col"><h4>4</h4></div>
+					</div>
+					<div class="col-8">
+						<div class="docs-col"><h4>8</h4></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4">
+						<div class="docs-col"><h4>4</h4></div>
+					</div>
+					<div class="col-4">
+						<div class="docs-col"><h4>4</h4></div>
+					</div>
+					<div class="col-4">
+						<div class="docs-col"><h4>4</h4></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-1">
+						<div class="docs-col"><h4>1</h4></div>
+					</div>
+					<div class="col-1">
+						<div class="docs-col"><h4>1</h4></div>
+					</div>
+					<div class="col-1">
+						<div class="docs-col"><h4>1</h4></div>
+					</div>
+					<div class="col-1">
+						<div class="docs-col"><h4>1</h4></div>
+					</div>
+					<div class="col-1">
+						<div class="docs-col"><h4>1</h4></div>
+					</div>
+					<div class="col-1">
+						<div class="docs-col"><h4>1</h4></div>
+					</div>
+					<div class="col-1">
+						<div class="docs-col"><h4>1</h4></div>
+					</div>
+					<div class="col-1">
+						<div class="docs-col"><h4>1</h4></div>
+					</div>
+					<div class="col-1">
+						<div class="docs-col"><h4>1</h4></div>
+					</div>
+					<div class="col-1">
+						<div class="docs-col"><h4>1</h4></div>
+					</div>
+					<div class="col-1">
+						<div class="docs-col"><h4>1</h4></div>
+					</div>
+					<div class="col-1">
+						<div class="docs-col"><h4>1</h4></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="utilities" id="utilities">
+				<h3 class="title">Utility Classes</h3>
+				<p>We added some simple and functional class names for behavior tweaks.</p>
+				
+				<h3 class="subtitle text-left">Floating elements</h3>
+				<div class="row text-left">
+					<div class="col-6">
+						<h4>.pull-left</h4>
+						<p>This floats an element to the left.</p>
+					</div>
+					<div class="col-6">
+						<h4>.pull-right</h4>
+						<p>This floats an element to the right.</p>
+					</div>
+				</div>
+				<h3 class="subtitle text-left">Text Alignments</h3>	
+				<div class="row text-left">
+					<div class="col-4">
+						<h4>.text-left</h4>
+						<p>This aligns the text to the left.</p>
+					</div>
+					<div class="col-4">
+						<h4>.text-right</h4>
+						<p>This aligns the text to the right.</p>
+					</div>
+					<div class="col-4">
+						<h4>.text-justify</h4>
+						<p>This aligns the text to be justify.</p>
+					</div>
+				</div>
+				<h3 class=" subtitle text-left">Center</h3>
+				<div class="row text-left">
+					<div class="col-6">
+						<h4>.vertical-align</h4>
+						<p>This class will align any element vertically. The only but is that its parent has to have a height.</p>
+					</div>
+					<div class="col-6">
+						<div class="example-col text-left">
+							<div class="vertical-align">
+								<h4>I'm centered!</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row text-left">
+					<div class="col-6">
+						<h4>.flex-center</h4>
+						<p>This class will center any element, the only constrain is that you have to apply it to the elements' parent, not to the element.</p>
+					</div>
+					<div class="col-6">
+						<div class="example-col flex-center">
+							<h4>Hi, I'm centered because of my parent!</h4>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="media-queries" id="media-queries">
+				<h3 class="title">Media Queries</h3>
+				<p>We have provided a set of helpful media query mixins with really cool names. Kudos to Rafal Bromirski. We have one for Mobile and Tablet so it's easier for you to manage those screens.</p>
+
+				<div class="row">
+					<div class="col-6">
+						<h3 class="subtitle text-left">Example of Mobile Full media</h3>
+						<div class="example-col text-left">
+							<h4>
+								@media only screen and (min-width: 320px) and (max-width: 480px) { <br>
+									<span>//Your set of rules</span> <br>
+								}
+							</h4>
+						</div>
+					</div>
+					<div class="col-6">
+						<h3 class="subtitle text-left">Our Mobile mixin</h3>
+						<div class="example-col text-left">
+							<h4>
+								.class-name { <br>
+	    							<span>//Regular css rules</span> <br>
+	    						<br>
+					    		<span>@include phone { </span><br>
+					      	<span>//Your awesome responsive rules. Cool isn't it?</span> <br>
+					    		<span>}</span> <br>
+	  						} 
+	  					</h4>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<h3 class="subtitle text-left">Our Tablet mixin</h3>
+						<div class="example-col text-left">
+							<h4>
+								.class-name { <br>
+	    							<span>//Regular css rules</span> <br>
+	    						<br>
+					    		<span>@include tablet { </span><br>
+					      	<span>//Your awesome responsive rules. Cool isn't it?</span> <br>
+					    		<span>}</span> <br>
+	  						} 
+	  					</h4>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="responsive" id="responsive">
+				<h3 class="title">Responsive</h3>
+				<p>We made some class names to make it more easy for you to manage the responsive part, with them you can show or hide content on small, medium or large devices.</p>
+				
+				<div class="row">
+					<h3 class="subtitle text-left">Visibility</h3>
+					<table class="text-left">
+					  <tr>
+					  	<th></th>
+					    <th class="bold">Width < 768px</th>
+					    <th class="bold">Width < 992px</th>
+					    <th class="bold">Width < 1200px</th>
+					    <th class="bold">Width > 1200px</th>
+					  </tr>
+					  <tr>
+					    <td class="bold">visible-on-xsmall</td>
+					    <td>Visible</td>
+					    <td>Hidden</td>
+					    <td>Hidden</td>
+					    <td>Hidden</td>
+					  </tr>
+					  <tr>
+					    <td class="bold">visible-on-small</td>
+					    <td>Hidden</td>
+					    <td>Visible</td>
+					    <td>Hidden</td>
+					    <td>Hidden</td>
+					  </tr>
+					  <tr>
+					    <td class="bold">visible-on-medium</td>
+					    <td>Hidden</td>
+					    <td>Hidden</td>
+					    <td>Visible</td>
+					    <td>Hidden</td>
+					  </tr>
+					  <tr>
+					    <td class="bold">visible-on-large</td>
+					    <td>Hidden</td>
+					    <td>Hidden</td>
+					    <td>Hidden</td>
+					    <td>Visible</td>
+					  </tr>
+					  <tr>
+					    <td class="bold">hidden-on-xsmall</td>
+					   	<td>Hidden</td>
+					    <td>Visible</td>
+					    <td>Visible</td>
+					    <td>Visible</td>
+					  </tr>
+					  <tr>
+					    <td class="bold">hidden-on-small</td>
+					    <td>Visible</td>
+					    <td>Hidden</td>
+					    <td>Visible</td>
+					    <td>Visible</td>
+					  </tr>
+					  <tr>
+					    <td class="bold">hidden-on-medium</td>
+					    <td>Visible</td>
+					    <td>Visible</td>
+					    <td>Hidden</td>
+					    <td>Visible</td>
+					  </tr>
+					  <tr>
+					    <td class="bold">hidden-on-large</td>
+					    <td>Visible</td>
+					    <td>Visible</td>
+					    <td>Visible</td>
+					    <td>Hidden</td>
+					  </tr>
+					</table>
+				</div>
+			</section>
+			<section class="download" id="download">
+				<h3 class="title">Do you like what you see?</h3>
+				<a href="https://github.com/IcaliaLabs/alom" class="btn" target="_blank">Download it</a>
+			</section>
+		</div>
+		<script>
+      new WOW().init();
+     </script>
+	</body>
+</html>

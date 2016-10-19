@@ -15,38 +15,49 @@ local = {  baseDir: "/"  }
 
 srcs =
     scss: 'scss/**/*.scss'
+    docscss: 'docs/**/*.scss'
     html: '*.html'
+    img: 'images/*'
     watch:
         scss: 'scss/**/*.scss'
-        html: '*.html'
+        docscss: 'docs/**/*.scss'
+        html: 'docs/*.html'
+        img: 'images/*'
 
 dests =
-    css: 'dist/css'
-    html: 'dist/'
+    cssdist: 'dist/css'
+    cssdocs: 'docs'
 
 ### Define all your source files here ###
 sync = 
-    css: 'dist/css/**/*.css'
+    css: 'docs/css/**/*.css'
     html: 'dist/*.html'
 
 # Tasks
 ### On each source file change, trigger a browsersync.reload ###
 gulp.task 'browser-sync', ->
     bs1.init({
-	    port: 3014,
-	    server: "./dist"
-	})
+        port: 3014,
+        server: "./docs"
+    })
     gulp.watch(sync.css).on('change', bs1.reload);
 
 gulp.task 'css', ->
-    gulp.src srcs.scss
+    gulp.src srcs.scss 
         .pipe sass().on('error', (err) ->
             notify(title: 'CSS Task').write err.line + ': ' + err.message  
             this.emit('end');
         )
         .pipe autoprefixer(cascade: false, browsers: ['> 3%'])
         .pipe(concat('alom.css'))
-        .pipe gulp.dest dests.css
+        .pipe gulp.dest dests.cssdist
+        .pipe gulp.dest dests.cssdocs
+
+gulp.task 'docscss', ->
+    gulp.src srcs.docscss 
+        .pipe sass()
+        .pipe autoprefixer(cascade: false, browsers: ['> 3%'])
+        .pipe gulp.dest dests.cssdocs
 
 gulp.task 'html', ->
     gulp.src srcs.html
@@ -55,6 +66,7 @@ gulp.task 'html', ->
 
 gulp.task 'watch', ->
     gulp.watch srcs.watch.scss, ['css']
+    gulp.watch srcs.watch.docscss, ['docscss']
     gulp.watch srcs.watch.html, ['html']
 
-gulp.task 'default', ['html', 'css', 'browser-sync', 'watch']
+gulp.task 'default', [ 'css', 'docscss', 'browser-sync', 'watch']

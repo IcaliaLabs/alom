@@ -1,0 +1,87 @@
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * MIXINS COLLECTION
+ * 
+ * Designed and built @kurenn  
+ */
+
+//Clears the float from any element
+@mixin clearfix {
+  &:before, &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+//Credits to bootstrap
+@mixin responsive-invisibility {
+  display: none !important;
+
+  tr, th, td {
+    display: none !important;
+  }
+}
+
+@mixin responsive-visibility {
+  display: block !important;
+
+  &.btn {
+    display: inline-block !important;
+  }
+
+  tr {
+    display: table-row !important;
+  }
+
+  th, td {
+    display: table-cell !important;
+  }
+}
+
+@mixin img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@mixin touch-callout {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin build-column-grids($columns: 12) {
+  $unit-width: (100 / $columns);  
+  $column-factor: 0.1833;
+
+
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      $current-width: ($unit-width * $i) - $column-factor;
+      width: percentage($current-width / 100);
+      margin-left: percentage($column-factor / 100);
+    }
+  }
+
+}
+
+@mixin backface-visibility($property: hidden) {
+	-webkit-backface-visibility: $property;
+	-moz-backface-visibility: $property;
+	backface-visibility: $property;
+}
+
+@mixin perspective($value: 1300px) {
+	-webkit-perspective: $value;
+	-moz-perspective: $value;
+	perspective: $value;
+}
