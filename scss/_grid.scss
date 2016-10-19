@@ -6,11 +6,9 @@
 //Grid settings
 $number-of-columns: 12 !default;
 $offset-columns: $number-of-columns !default;
-$column-separation-factor: 0.1833 !default;
 
 //Row config
 $row-text-rendering: optimizespeed !default;
-$row-next-to-row-separation: 0.14285714rem !default;
 
 //Stack columns
 $stack-column-separation: 2px !default;
@@ -49,11 +47,9 @@ $grid-max-width: 768px !default;
 
 .row {
   @extend %clearfix;
-  display: block;
-
-  //Columns
   @include grid-columns;
   @include grid-columns-offset;
+  display: block;
 }
 
 //Borders and paddings are applied inside the div element
@@ -64,14 +60,15 @@ $grid-max-width: 768px !default;
 
 @include max-screen($grid-max-width) {
   .row > [class*="col-"] {
-    width: 100%;
-    margin-left: 0;
     margin-bottom: $stack-column-separation;
-    padding-right: $stack-column-padding-right;
+    margin-left: 0;
     padding-left: $stack-column-padding-left;
+    padding-right: $stack-column-padding-right;
+    width: 100%;
   }
 
   [class*="offset-"] {
-    margin-left: 0; 
+    margin-left: 0;
   }
 }
+

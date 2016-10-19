@@ -1,6 +1,6 @@
 ---
 engines:
-  coffeelint:
+  scss-lint:
     enabled: true
   fixme:
     enabled: true
