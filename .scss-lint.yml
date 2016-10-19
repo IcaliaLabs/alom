@@ -4,6 +4,7 @@ exclude:
   - 'dist/**'
   - 'docs/**'
   - 'node_modules/**'
+  - 'scss/_reset.scss'
 
 linters:
   VendorPrefix:
