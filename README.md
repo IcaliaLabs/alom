@@ -1,5 +1,5 @@
 
-![Alom](alom.jpg)
+![Alom](alombanner.jpg)
 
 [![Code Climate](https://codeclimate.com/repos/5808049026e38000680068cb/badges/5c7f82ba462279a7ea59/gpa.svg)](https://codeclimate.com/repos/5808049026e38000680068cb/feed)
 [![Issue Count](https://codeclimate.com/repos/5808049026e38000680068cb/badges/5c7f82ba462279a7ea59/issue_count.svg)](https://codeclimate.com/repos/5808049026e38000680068cb/feed)
