@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  web:
+    image: icalialabs/alom:development
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes:
+      # Mount our app code directory (".") into our app containers at the
+      # "/usrc/src/app" folder:
+      - .:/usr/src/app
+    ports:
+      - 3014:3014
+      - 3001:3001
+    command: gulp
+    environment:
+      LC_ALL: C.UTF-8
