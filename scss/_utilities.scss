@@ -107,3 +107,19 @@ $displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table';
     }
   }
 }
+
+//############################################//
+//####### Hide or Disable Utilities #########//
+//###########################################//
+
+.is-disabled {
+  pointer-events: none;
+}
+
+.is-unselectable {
+  user-select: none;
+}
+
+.is-hidden.is-hidden {
+  display: none;
+}
