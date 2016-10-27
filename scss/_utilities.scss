@@ -26,10 +26,10 @@ $texts: 'right', 'left', 'justify', 'center';
 //############# Displays  Utilities #########//
 //###########################################//
 
-$displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table';
+$displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table', 'none';
 
 @each $display in $displays {
-  .is-#{$display} {
+  .display-#{$display} {
       display: #{$display};
   }
 }
@@ -121,5 +121,28 @@ $displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table';
 }
 
 .is-hidden.is-hidden {
-  display: none;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+//############################################//
+//####### Hide or Disable Utilities #########//
+//###########################################//
+
+.testmode {
+  * {
+    background: rgba(255,0,0,0.1) !important;
+  }
+}
+
+.bordermode {
+  * {
+    border: 1px solid red !important;
+  }
 }
