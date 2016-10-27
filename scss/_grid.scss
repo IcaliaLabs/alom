@@ -40,8 +40,6 @@
   }
 }
 
-// //Borders and paddings are applied inside the div element
-// //This prevents the columns to stack by a border or padding
 
 @include max-screen($grid-break) {
   .row:not(.fixed) {
@@ -55,3 +53,37 @@
   }
 }
 
+
+//############################################//
+//########### Flex Grid System ##############//
+//###########################################//
+
+.row-flex {
+  display: flex;
+
+  & > [class*="col-"] {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex: none;
+  }
+
+  @include grid-columns;
+  @include grid-columns-offset;
+}
+
+@include max-screen($grid-break) {
+  .row-flex:not(.fixed) {
+    flex-direction: column;
+
+    & > [class*="col-"] {
+     width: 100%;
+     flex: 1;
+    }
+
+    & > [class*="offset-"] {
+      margin-left: 0;
+    }
+  }
+}
