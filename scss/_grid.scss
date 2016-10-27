@@ -46,7 +46,7 @@ $grid-max-width: 768px !default;
 }
 
 .row {
-  @extend %clearfix;
+  @include clearfix;
   @include grid-columns;
   @include grid-columns-offset;
   display: block;
