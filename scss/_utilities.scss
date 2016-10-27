@@ -1,17 +1,7 @@
-//Clears the float from any element
-%clearfix {
-  &::before,
-  &::after {
-    content: '';
-    display: table;
-  }
+//############################################//
+//############# Flaot Utilities  ############//
+//###########################################//
 
-  &::after {
-    clear: both;
-  }
-}
-
-//Floats
 .pull-right {
   float: right;
 }
@@ -20,25 +10,33 @@
   float: left;
 }
 
-//Text alignments
+//############################################//
+//############# Flaot Utilities  ############//
+//###########################################//
 
-.text-right {
-  text-align: right;
+$texts: 'right', 'left', 'justify', 'center';
+
+@each $text in $texts {
+  .text-#{$text} {
+      text-align: #{$text};
+  }
 }
 
-.text-center {
-  text-align: center;
+//############################################//
+//############# Displays  Utilities #########//
+//###########################################//
+
+$displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table';
+
+@each $display in $displays {
+  .is-#{$display} {
+      display: #{$display};
+  }
 }
 
-.text-justify {
-  text-align: justify;
-}
-
-.text-left {
-  text-align: left;
-}
-
-//Vertical align
+//############################################//
+//############# Align Utilities #############//
+//###########################################//
 
 .vertical-align {
   position: relative;
