@@ -1,8 +1,24 @@
-$rem-base: 16 !default;
+//############################################//
+//######## Pixels to Rems Function  #########//
+//###########################################//
 
-@function px-to-rems($size: 24) {
-  $value: ($size / $rem-base) * 1rem;
-
-  @return $value;
+// !! Font base is declared in _variables file !! //
+@function px-to-rems($size) {
+  @return ($size / $font-base) * 1rem;
 }
 
+//############################################//
+//######### Pixels to ems Function  #########//
+//###########################################//
+
+@function px-to-ems($size) {
+  @return ($size / $font-base) * 1em;
+}
+
+//############################################//
+//##### Pixels to Percentage Function  ######//
+//###########################################//
+
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
