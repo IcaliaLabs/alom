@@ -18,7 +18,21 @@
 //############################################//
 //##### Pixels to Percentage Function  ######//
 //###########################################//
+//Example: width: calc-percent(200,768);
 
 @function calc-percent($target, $container) {
   @return ($target / $container) * 100%;
+}
+
+//############################################//
+//##### Pixels to Percentage Function  ######//
+//###########################################//
+//Example background: image('logo.png');
+
+@function asset($type, $file) {
+  @return url($asset-base-path + '/' + $type + '/' + $file);
+}
+
+@function image($file) {
+  @return asset('images', $file);
 }
