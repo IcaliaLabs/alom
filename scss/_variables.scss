@@ -14,3 +14,9 @@ $asset-base-path: '../assets' !default;
 $number-of-columns: 12 !default;
 $offset-columns: $number-of-columns !default;
 $grid-break: 768px;
+
+//Responsive Breakpints
+$small: 768px;
+$medium: 1024px;
+$large: 1140px;
+$wide: 4096px;
