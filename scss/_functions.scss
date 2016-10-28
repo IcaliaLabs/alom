@@ -36,3 +36,52 @@
 @function image($file) {
   @return asset('images', $file);
 }
+
+//############################################//
+//####### Get next value on maps  ########/////
+//###########################################//
+
+@function next($map, $key, $fallback: null) {
+  $i: 0;
+  $key-index: false;
+
+  @each $map-key, $map-value in $map {
+    $i: $i + 1;
+    
+    @if $map-key == $key {
+      $key-index: $i;
+    }
+
+    @if $i == $key-index + 1 {
+      @return $map-value;
+    }
+
+    @if $i == length($map) {
+      @return $map-value;
+    }
+
+  }
+}
+
+//############################################//
+//####### Get previus value on maps  ########//
+//###########################################//
+ 
+@function prev($map, $key, $fallback: false, $return: value) {
+  $i: 0;
+  $key-index: false;
+  @each $map-key, $map-value in $map {
+    $i: $i + 1;
+    @if $map-key == $key {
+      $key-index: $i;
+      $i: $i - 1;
+      @if $i > 0 {
+        @each $map-key, $map-value in $map {
+          $map2: (nth($map, $i));
+          @return nth($map2, 2);
+        }
+      }
+      @return $map-value;
+    }
+  }
+}
