@@ -29,7 +29,7 @@
   @include grid-columns-offset;
   display: block;
 
-  & > {
+  > {
     [class*="col-"] {
       float: left;
 
@@ -43,11 +43,11 @@
 
 @media screen and (max-width: $grid-break) {
   .row:not(.fixed) {
-    & > [class*="col-"] {
-     width: 100%;
+    > [class*="col-"] {
+      width: 100%;
     }
 
-    & > [class*="offset-"] {
+    > [class*="offset-"] {
       margin-left: 0;
     }
   }
@@ -59,30 +59,29 @@
 //###########################################//
 
 .row-flex {
+  @include grid-columns;
+  @include grid-columns-offset;
   display: flex;
 
   & > [class*="col-"] {
     display: block;
+    flex: none;
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
-    flex: none;
   }
-
-  @include grid-columns;
-  @include grid-columns-offset;
 }
 
 @media screen and (max-width: $grid-break) {
   .row-flex:not(.fixed) {
     flex-direction: column;
 
-    & > [class*="col-"] {
-     width: 100%;
-     flex: 1;
+    > [class*="col-"] {
+      flex: 1;
+      width: 100%;
     }
 
-    & > [class*="offset-"] {
+    > [class*="offset-"] {
       margin-left: 0;
     }
   }

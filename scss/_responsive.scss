@@ -41,7 +41,6 @@ $breakpoints: (
   .hide-#{$bp}-only {
     @media screen and  (min-width: prev($breakpoints, #{$bp})) and (max-width: next($breakpoints, #{$bp})) {
       display: none !important;
-      background: red;
     }
   }
 }

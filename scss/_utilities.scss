@@ -18,7 +18,7 @@ $texts: 'right', 'left', 'justify', 'center';
 
 @each $text in $texts {
   .text-#{$text} {
-      text-align: #{$text};
+    text-align: #{$text};
   }
 }
 
@@ -30,7 +30,7 @@ $displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table', 'n
 
 @each $display in $displays {
   .display-#{$display} {
-      display: #{$display};
+    display: #{$display};
   }
 }
 
@@ -46,14 +46,14 @@ $displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table', 'n
   }
 
   &.horizontal {
-    position: relative;
     left: 50%;
+    position: relative;
     transform: translateX(-50%);
   }
 
   &.center {
-    position: relative;
     left: 50%;
+    position: relative;
     top: 50%;
     transform: translate(-50%, -50%);
   }
@@ -137,12 +137,12 @@ $displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table', 'n
 
 .testmode {
   * {
-    background: rgba(255,0,0,0.1) !important;
+    background: rgba(255, 0, 0, 0.1) !important;
   }
 }
 
 .bordermode {
   * {
-    border: 1px solid red !important;
+    border: 1px solid rgba(255, 0, 0, 1) !important;
   }
 }
