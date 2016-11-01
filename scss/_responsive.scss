@@ -44,3 +44,12 @@ $breakpoints: (
     }
   }
 }
+
+@each $bp in map-keys($breakpoints) {
+  .show-#{$bp}-only {
+    visibility: hidden;
+    @media screen and  (min-width: prev($breakpoints, #{$bp})) and (max-width: next($breakpoints, #{$bp})) {
+      visibility: visible;
+    }
+  }
+}

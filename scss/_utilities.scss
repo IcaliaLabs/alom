@@ -53,7 +53,7 @@ $displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table', 'n
 
   &.center {
     left: 50%;
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
   }
