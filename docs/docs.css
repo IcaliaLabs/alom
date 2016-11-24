@@ -146,6 +146,7 @@ body {
 .responsive table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
+  margin-bottom: 2.5rem;
   width: 100%; }
 
 .responsive td, .responsive th {
