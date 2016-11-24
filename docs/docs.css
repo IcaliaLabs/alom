@@ -129,6 +129,11 @@ body {
   height: 8rem;
   text-align: center; }
 
+.media-queries {
+  padding-bottom: 40; }
+  .media-queries .example-col {
+    margin-bottom: 2.5rem; }
+
 .media-queries h4,
 .functions h4 {
   line-height: 1.5; }

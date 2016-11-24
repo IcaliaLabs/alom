@@ -157,6 +157,13 @@ body {
 	}
 }
 
+.media-queries {
+	padding-bottom: 40;
+	.example-col {
+		margin-bottom: px-to-rems(40);
+	}
+}
+
 .media-queries,
 .functions {
 	h4 {
