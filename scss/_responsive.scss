@@ -13,7 +13,6 @@ $breakpoints: (
 //# Customize Alom editing the variables  ###//
 //###########################################//
 // Example: @include breakpoint(s);
-
 @mixin breakpoint($bp) {
   @media screen and (max-width: #{map-get($breakpoints, $bp)}) {
     @content;
@@ -24,7 +23,6 @@ $breakpoints: (
 //############################################//
 //####### Hide elements on devices  #########//
 //###########################################//
-
 @each $bp in map-keys($breakpoints) {
   .hide-#{$bp} {
     @include breakpoint($bp) {
@@ -36,7 +34,6 @@ $breakpoints: (
 //############################################//
 //### Hide elements in only this devices  ###//
 //###########################################//
-
 @each $bp in map-keys($breakpoints) {
   .hide-#{$bp}-only {
     @media screen and  (min-width: prev($breakpoints, #{$bp})) and (max-width: next($breakpoints, #{$bp})) {
@@ -44,10 +41,10 @@ $breakpoints: (
     }
   }
 }
-
 @each $bp in map-keys($breakpoints) {
   .show-#{$bp}-only {
     visibility: hidden;
+
     @media screen and  (min-width: prev($breakpoints, #{$bp})) and (max-width: next($breakpoints, #{$bp})) {
       visibility: visible;
     }

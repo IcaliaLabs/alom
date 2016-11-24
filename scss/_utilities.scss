@@ -57,54 +57,54 @@ $displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table', 'n
     top: 50%;
     transform: translate(-50%, -50%);
   }
+}
 
-  &-flex {
-    display: flex;
+.align-flex {
+  display: flex;
 
-    &.is-column {
-      flex-direction: column;
+  &.is-column {
+    flex-direction: column;
 
-      &.vertical {
-        justify-content: center;
-
-        &.end {
-          justify-content: flex-end;
-        }
-      }
-
-      &.horizontal {
-        align-items: center;
-
-        &.end {
-          align-items: flex-end;
-        }
-      }
-    }
-
-    &.vertical:not(.is-column) {
-      align-items: center;
-
-      &.end {
-        justify-content: flex-end;
-      }
-    }
-
-    &.horizontal:not(.is-column) {
-      justify-content: center;
-
-      &.end {
-        align-items: flex-end;
-      }
-    }
-
-    &.center {
-      align-items: center;
+    &.vertical {
       justify-content: center;
     }
 
-    &.between {
-      justify-content: space-between;
+    &.vertical-end {
+      justify-content: flex-end;
     }
+
+    &.horizontal {
+      align-items: center;
+    }
+
+    &.horizontal-end {
+      align-items: flex-end;
+    }
+  }
+
+  &.vertical:not(.is-column) {
+    align-items: center;
+
+    &.end {
+      justify-content: flex-end;
+    }
+  }
+
+  &.horizontal:not(.is-column) {
+    justify-content: center;
+
+    &.end {
+      align-items: flex-end;
+    }
+  }
+
+  &.center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.between {
+    justify-content: space-between;
   }
 }
 
@@ -137,7 +137,7 @@ $displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table', 'n
 
 .testmode {
   * {
-    background: rgba(255, 0, 0, 0.1) !important;
+    background: rgba(255, 0, 0, .1) !important;
   }
 }
 
