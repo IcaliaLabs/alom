@@ -56,7 +56,7 @@ body {
 
 .main-section {
 	height: 100vh;
-	padding-top: 10rem;
+	padding-top: px-to-rems(70);
 
 	h3 {
 		color: $main-color;

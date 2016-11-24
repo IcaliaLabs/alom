@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<header class="main-header wow animated bounceInDown">
-			<div class="container main-header__container">
+			<div class="container main-header__container align-flex between">
 				<a href="/">alom</a>
 				<nav class="main-nav">
 					<a href="#nav-wrap">Docs</a>
@@ -221,7 +221,7 @@
 						<p>This aligns the text to be justify.</p>
 					</div>
 				</div>
-				<h3 class=" subtitle text-left">Align Center</h3>
+				<h3 class=" subtitle text-left">Alignment Utilities</h3>
 				<div class="row text-left">
 					<div class="col-6">
 						<h4>.align.vertical</h4>
@@ -238,7 +238,7 @@
 				<div class="row text-left">
 					<div class="col-6">
 						<h4>.align-flex.vertical</h4>
-						<p>This classes will center any element, the only constrain is that you have to apply it to the elements' parent, not to the element itself.</p>
+						<p>This classes will center any element vertically using flex, the only constrain is that you have to apply it to the elements' parent, not to the element itself.</p>
 					</div>
 					<div class="col-6">
 						<div class="example-col align-flex center">
@@ -249,11 +249,24 @@
 				<div class="row text-left">
 					<div class="col-6">
 						<h4>.align-flex.center</h4>
-						<p>This class will center any element, the only constrain is that you have to apply it to the elements' parent, not to the element itself.</p>
+						<p>This class will center any element vertically and horizontally using flex, the only constrain is that you have to apply it to the elements' parent, not to the element itself.</p>
 					</div>
 					<div class="col-6">
 						<div class="example-col align-flex center">
 							<h4>Hi, I'm centered because of my parent!</h4>
+						</div>
+					</div>
+				</div>
+				<div class="row text-left">
+					<div class="col-6">
+						<h4>.align-flex.between</h4>
+						<p>This class will give the same amount of space to each element using flex, the only constrain is that you have to apply it to the elements' parent.</p>
+					</div>
+					<div class="col-6">
+						<div class="example-col align-flex vertical between">
+							<h4>Hello</h4>
+							<h4>it's</h4>
+							<h4>me</h4>
 						</div>
 					</div>
 				</div>
