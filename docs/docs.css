@@ -84,6 +84,7 @@ body {
     padding: 0.625rem; }
 
 .grid,
+.functions,
 .utilities,
 .media-queries,
 .responsive,
@@ -91,6 +92,7 @@ body {
   border-bottom: 1px solid #DEDEDE;
   padding: 5rem 0 5rem 0; }
   .grid h4,
+  .functions h4,
   .utilities h4,
   .media-queries h4,
   .responsive h4,
@@ -99,6 +101,7 @@ body {
     font-weight: 400;
     margin-bottom: 1.125rem; }
   .grid p,
+  .functions p,
   .utilities p,
   .media-queries p,
   .responsive p,
@@ -106,6 +109,7 @@ body {
     margin-bottom: 2.5rem;
     line-height: 2; }
   .grid .docs-col,
+  .functions .docs-col,
   .utilities .docs-col,
   .media-queries .docs-col,
   .responsive .docs-col,
@@ -125,10 +129,12 @@ body {
   height: 8rem;
   text-align: center; }
 
-.media-queries h4 {
+.media-queries h4,
+.functions h4 {
   line-height: 1.5; }
 
-.media-queries span {
+.media-queries span,
+.functions span {
   color: #4A4A4A;
   margin-left: 1.125rem; }
 

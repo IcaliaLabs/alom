@@ -117,6 +117,7 @@ body {
 }
 
 .grid,
+.functions,
 .utilities,
 .media-queries,
 .responsive,
@@ -156,7 +157,8 @@ body {
 	}
 }
 
-.media-queries {
+.media-queries,
+.functions {
 	h4 {
 		line-height: 1.5;
 	}

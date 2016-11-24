@@ -115,6 +115,45 @@
 				</div>
 			</section>
 
+			<section class="functions" id="functions">
+				<h3 class="title">Functions</h3>
+				<p>We have functions to help you make the responsive side even more easy.</p>
+
+				<h3 class="subtitle text-left">Pixels to rems</h3>
+				<div class="row text-left">
+					<div class="col-6">
+						<h4>px-to-rems($value)</h4>
+						<p>With this function you convert the pixels to rems, to make it easier on the responsive side, you can change the default value in the variables scss.</p>
+					</div>
+					<div class="col-6">
+						<div class="example-col text-left">
+							<h4>
+								body { <br>
+					    		<span>font-size: px-to-rems(16);</span><br>
+	  						} 
+	  					</h4>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="subtitle text-left">Pixels to ems</h3>
+				<div class="row text-left">
+					<div class="col-6">
+						<h4>px-to-ems($value)</h4>
+						<p>Just like the rems functions, just with ems.</p>
+					</div>
+					<div class="col-6">
+						<div class="example-col text-left">
+							<h4>
+								body { <br>
+					    		<span>font-size: px-to-ems(16);</span><br>
+	  						} 
+	  					</h4>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<section class="utilities" id="utilities">
 				<h3 class="title">Utility Classes</h3>
 				<p>We added some simple and functional class names for behavior tweaks.</p>
@@ -145,15 +184,15 @@
 						<p>This aligns the text to be justify.</p>
 					</div>
 				</div>
-				<h3 class=" subtitle text-left">Center</h3>
+				<h3 class=" subtitle text-left">Align Center</h3>
 				<div class="row text-left">
 					<div class="col-6">
-						<h4>.vertical-align</h4>
-						<p>This class will align any element vertically. The only but is that its parent has to have a height.</p>
+						<h4>.align.vertical</h4>
+						<p>This classes will align any element vertically. The only but is that its parent has to have a height.</p>
 					</div>
 					<div class="col-6">
 						<div class="example-col text-left">
-							<div class="vertical-align">
+							<div class="align vertical">
 								<h4>I'm centered!</h4>
 							</div>
 						</div>
@@ -161,11 +200,22 @@
 				</div>
 				<div class="row text-left">
 					<div class="col-6">
-						<h4>.flex-center</h4>
-						<p>This class will center any element, the only constrain is that you have to apply it to the elements' parent, not to the element.</p>
+						<h4>.align-flex.vertical</h4>
+						<p>This classes will center any element, the only constrain is that you have to apply it to the elements' parent, not to the element itself.</p>
 					</div>
 					<div class="col-6">
-						<div class="example-col flex-center">
+						<div class="example-col align-flex center">
+							<h4>Hi, I'm centered because of my parent!</h4>
+						</div>
+					</div>
+				</div>
+				<div class="row text-left">
+					<div class="col-6">
+						<h4>.align-flex.center</h4>
+						<p>This class will center any element, the only constrain is that you have to apply it to the elements' parent, not to the element itself.</p>
+					</div>
+					<div class="col-6">
+						<div class="example-col align-flex center">
 							<h4>Hi, I'm centered because of my parent!</h4>
 						</div>
 					</div>
