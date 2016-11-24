@@ -168,3 +168,6 @@ body {
   .btn:hover {
     background: #4A90E2;
     color: white; }
+
+.grid h4 {
+  margin-bottom: 0; }
