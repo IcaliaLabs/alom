@@ -175,8 +175,8 @@ body {
     background: #4A90E2;
     color: white; }
 
-.grid .row, .grid .row-flex {
-  margin-bottom: 2.5rem; }
+.grid .title {
+  margin-top: 2.5rem; }
 
 .grid h4 {
   margin-bottom: 0; }

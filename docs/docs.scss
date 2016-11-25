@@ -218,9 +218,8 @@ body {
 }
 
 .grid {
-
-	.row, .row-flex {
-		margin-bottom: px-to-rems(40);
+	.title {
+		margin-top: px-to-rems(40)
 	}
 	h4 {
 		margin-bottom: 0;
