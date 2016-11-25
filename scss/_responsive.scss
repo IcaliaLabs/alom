@@ -24,7 +24,7 @@ $breakpoints: (
 //####### Hide elements on devices  #########//
 //###########################################//
 @each $bp in map-keys($breakpoints) {
-  .hide-#{$bp} {
+  .hide-on-#{$bp} {
     @include breakpoint($bp) {
       display: none !important;
     }
@@ -35,14 +35,14 @@ $breakpoints: (
 //### Hide elements in only this devices  ###//
 //###########################################//
 @each $bp in map-keys($breakpoints) {
-  .hide-#{$bp}-only {
+  .hide-on-#{$bp}-only {
     @media screen and  (min-width: prev($breakpoints, #{$bp})) and (max-width: next($breakpoints, #{$bp})) {
       display: none !important;
     }
   }
 }
 @each $bp in map-keys($breakpoints) {
-  .show-#{$bp}-only {
+  .show-on-#{$bp} {
     visibility: hidden;
 
     @media screen and  (min-width: prev($breakpoints, #{$bp})) and (max-width: next($breakpoints, #{$bp})) {

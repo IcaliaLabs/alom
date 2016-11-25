@@ -150,6 +150,21 @@
 						<div class="docs-col"><h4>3</h4></div>
 					</div>
 				</div>
+
+				<h3 class="title">Offsets on columns</h3>
+				<p>Probably you will want to add some offset the columns of the grid, to put it more to the right, don't worry we have you covered. 
+				Let us explain this thing works. In a case where want blank space between columns, the fair solution was to add some blank columns actually, that is not necessary with the offsets though. Offset will add a margin to the left according to the 12 column grid Furatto offers.</p>
+				<div class="row">
+					<div class="offset-4">
+						<div class="docs-col"><h4>Offset 4</h4></div>
+					</div>
+					<div class="offset-3">
+						<div class="docs-col"><h4>Offset 3</h4></div>
+					</div>
+					<div class="offset-2">
+						<div class="docs-col"><h4>Offset 2</h4></div>
+					</div>
+				</div>
 			</section>
 
 			<section class="functions" id="functions">
@@ -221,6 +236,10 @@
 						<p>This aligns the text to be justify.</p>
 					</div>
 				</div>
+				<div class="row text-left">
+					<h4>.text-center</h4>
+					<p>This aligns the text to be center.</p>
+				</div>
 				<h3 class=" subtitle text-left">Alignment Utilities</h3>
 				<div class="row text-left">
 					<div class="col-6">
@@ -268,6 +287,42 @@
 							<h4>it's</h4>
 							<h4>me</h4>
 						</div>
+					</div>
+				</div>
+
+				<h3 class="subtitle text-left">Display Utilities</h3>	
+				<div class="row text-left">
+					<div class="col-4">
+						<h4>.display-block</h4>
+						<p>This class will add its name to the element.</p>
+					</div>
+					<div class="col-4">
+						<h4>.display-inline</h4>
+						<p>This class will add its name to the element.</p>
+					</div>
+					<div class="col-4">
+						<h4>.display-inline-block</h4>
+						<p>This class will add its name to the element.</p>
+					</div>
+				</div>
+				<div class="row text-left">
+					<div class="col-4">
+						<h4>.display-flex</h4>
+						<p>This class will add its name to the element.</p>
+					</div>
+					<div class="col-4">
+						<h4>.display-inline-flex</h4>
+						<p>This class will add its name to the element.</p>
+					</div>
+					<div class="col-4">
+						<h4>.display-table</h4>
+						<p>This class will add its name to the element.</p>
+					</div>
+				</div>
+				<div class="row text-left">
+					<div class="col-6">
+						<h4>.display-none</h4>
+						<p>This class will add its name to the element.</p>
 					</div>
 				</div>
 			</section>
@@ -366,56 +421,56 @@
 					    <th class="bold">Width > 4096px</th>
 					  </tr>
 					  <tr>
-					    <td class="bold">show-s-only</td>
+					    <td class="bold">show-on-s</td>
 					    <td>Visible</td>
 					    <td>Hidden</td>
 					    <td>Hidden</td>
 					    <td>Hidden</td>
 					  </tr>
 					  <tr>
-					    <td class="bold">show-m-only</td>
+					    <td class="bold">show-on-m</td>
 					    <td>Hidden</td>
 					    <td>Visible</td>
 					    <td>Hidden</td>
 					    <td>Hidden</td>
 					  </tr>
 					  <tr>
-					    <td class="bold">show-l-only</td>
+					    <td class="bold">show-on-l</td>
 					    <td>Hidden</td>
 					    <td>Hidden</td>
 					    <td>Visible</td>
 					    <td>Hidden</td>
 					  </tr>
 					  <tr>
-					    <td class="bold">show-w-only</td>
+					    <td class="bold">show-on-w</td>
 					    <td>Hidden</td>
 					    <td>Hidden</td>
 					    <td>Hidden</td>
 					    <td>Visible</td>
 					  </tr>
 					  <tr>
-					    <td class="bold">hide-s-only</td>
+					    <td class="bold">hide-on-s-only</td>
 					   	<td>Hidden</td>
 					    <td>Visible</td>
 					    <td>Visible</td>
 					    <td>Visible</td>
 					  </tr>
 					  <tr>
-					    <td class="bold">hide-m-only</td>
+					    <td class="bold">hide-on-m-only</td>
 					    <td>Visible</td>
 					    <td>Hidden</td>
 					    <td>Visible</td>
 					    <td>Visible</td>
 					  </tr>
 					  <tr>
-					    <td class="bold">hide-l-only</td>
+					    <td class="bold">hide-on-l-only</td>
 					    <td>Visible</td>
 					    <td>Visible</td>
 					    <td>Hidden</td>
 					    <td>Visible</td>
 					  </tr>
 					  <tr>
-					    <td class="bold">hide-w-only</td>
+					    <td class="bold">hide-on-w-only</td>
 					    <td>Visible</td>
 					    <td>Visible</td>
 					    <td>Visible</td>
@@ -426,21 +481,21 @@
 				<h3 class="subtitle text-left">Hiding elements</h3>
 				<div class="row text-left">
 					<div class="col-6">
-						<h4>.hide-s</h4>
+						<h4>.hide-on-s</h4>
 						<p>This class hides the element when it reaches 768px.</p>
 					</div>
 					<div class="col-6">
-						<h4>.hide-m</h4>
+						<h4>.hide-on-m</h4>
 						<p>This class hides the element when it reaches 1024px.</p>
 					</div>
 				</div>
 				<div class="row text-left">
 					<div class="col-6">
-						<h4>.hide-l</h4>
+						<h4>.hide-on-l</h4>
 						<p>This class hides the element when it reaches 1140px.</p>
 					</div>
 					<div class="col-6">
-						<h4>.hide-w</h4>
+						<h4>.hide-on-w</h4>
 						<p>This class hides the element when it reaches 4096px.</p>
 					</div>
 				</div>

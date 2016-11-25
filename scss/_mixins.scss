@@ -1,5 +1,5 @@
 //Clears the float from any element
-@mixin clearfix {
+%clearfix {
   &::before,
   &::after {
     content: '';

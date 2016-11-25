@@ -1,3 +1,10 @@
+.row::before, .row::after {
+  content: '';
+  display: table; }
+
+.row::after {
+  clear: both; }
+
 * {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-tap-highlight-color: transparent;
@@ -159,11 +166,6 @@ svg:not(:root) {
 
 .row {
   display: block; }
-  .row::before, .row::after {
-    content: '';
-    display: table; }
-  .row::after {
-    clear: both; }
   .row .col-1 {
     width: 8.33333%; }
   .row .col-2 {
@@ -212,15 +214,15 @@ svg:not(:root) {
     margin-left: 91.66667%; }
   .row .offset-12 {
     margin-left: 100%; }
-  .row > [class*="col-"] {
+  .row [class*="col-"] {
     float: left; }
-    .row > [class*="col-"].full-height {
+    .row [class*="col-"].full-height {
       height: 100%; }
 
 @media screen and (max-width: 768px) {
-  .row:not(.fixed) > [class*="col-"] {
+  .row:not(.fixed) [class*="col-"] {
     width: 100%; }
-  .row:not(.fixed) > [class*="offset-"] {
+  .row:not(.fixed) [class*="offset-"] {
     margin-left: 0; } }
 
 .row-flex {
@@ -274,7 +276,7 @@ svg:not(:root) {
     margin-left: 91.66667%; }
   .row-flex .offset-12 {
     margin-left: 100%; }
-  .row-flex > [class*="col-"] {
+  .row-flex [class*="col-"] {
     display: -ms-inline-grid;
     display: inline-grid;
     -webkit-box-flex: 0;
@@ -282,7 +284,7 @@ svg:not(:root) {
     -webkit-box-flex: 1;
     flex-grow: 1;
     flex-shrink: 1; }
-    .row-flex > [class*="col-"].full-height {
+    .row-flex [class*="col-"].full-height {
       height: 100%; }
 
 @media screen and (max-width: 768px) {
@@ -290,11 +292,11 @@ svg:not(:root) {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column; }
-    .row-flex:not(.fixed) > [class*="col-"] {
+    .row-flex:not(.fixed) [class*="col-"] {
       -webkit-box-flex: 1;
       flex: 1;
       width: 100%; }
-    .row-flex:not(.fixed) > [class*="offset-"] {
+    .row-flex:not(.fixed) [class*="offset-"] {
       margin-left: 0; } }
 
 .pull-right {
@@ -428,57 +430,57 @@ svg:not(:root) {
   border: 1px solid red !important; }
 
 @media screen and (max-width: 768px) {
-  .hide-s {
+  .hide-on-s {
     display: none !important; } }
 
 @media screen and (max-width: 1024px) {
-  .hide-m {
+  .hide-on-m {
     display: none !important; } }
 
 @media screen and (max-width: 1140px) {
-  .hide-l {
+  .hide-on-l {
     display: none !important; } }
 
 @media screen and (max-width: 4096px) {
-  .hide-w {
+  .hide-on-w {
     display: none !important; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .hide-s-only {
+  .hide-on-s-only {
     display: none !important; } }
 
 @media screen and (min-width: 768px) and (max-width: 1140px) {
-  .hide-m-only {
+  .hide-on-m-only {
     display: none !important; } }
 
 @media screen and (min-width: 1024px) and (max-width: 4096px) {
-  .hide-l-only {
+  .hide-on-l-only {
     display: none !important; } }
 
 @media screen and (min-width: 1140px) and (max-width: 4096px) {
-  .hide-w-only {
+  .hide-on-w-only {
     display: none !important; } }
 
-.show-s-only {
+.show-on-s {
   visibility: hidden; }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .show-s-only {
+    .show-on-s {
       visibility: visible; } }
 
-.show-m-only {
+.show-on-m {
   visibility: hidden; }
   @media screen and (min-width: 768px) and (max-width: 1140px) {
-    .show-m-only {
+    .show-on-m {
       visibility: visible; } }
 
-.show-l-only {
+.show-on-l {
   visibility: hidden; }
   @media screen and (min-width: 1024px) and (max-width: 4096px) {
-    .show-l-only {
+    .show-on-l {
       visibility: visible; } }
 
-.show-w-only {
+.show-on-w {
   visibility: hidden; }
   @media screen and (min-width: 1140px) and (max-width: 4096px) {
-    .show-w-only {
+    .show-on-w {
       visibility: visible; } }
