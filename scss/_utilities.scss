@@ -137,12 +137,12 @@ $displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table', 'n
 
 .testmode {
   * {
-    background: rgba(255, 0, 0, .1) !important;
+    background: $test-color !important;
   }
 }
 
 .bordermode {
   * {
-    border: 1px solid rgba(255, 0, 0, 1) !important;
+    border: 1px solid $test-border !important;
   }
 }
