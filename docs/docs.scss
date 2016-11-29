@@ -159,8 +159,13 @@ body {
 
 .media-queries {
 	padding-bottom: 40;
+
 	.example-col {
 		margin-bottom: px-to-rems(40);
+	}
+
+	h6 {
+		margin-bottom: px-to-rems(30);
 	}
 }
 

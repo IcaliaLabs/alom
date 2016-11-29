@@ -133,6 +133,8 @@ body {
   padding-bottom: 40; }
   .media-queries .example-col {
     margin-bottom: 2.5rem; }
+  .media-queries h6 {
+    margin-bottom: 1.875rem; }
 
 .media-queries h4,
 .functions h4 {
