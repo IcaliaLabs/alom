@@ -1,17 +1,7 @@
-//Clears the float from any element
-%clearfix {
-  &::before,
-  &::after {
-    content: '';
-    display: table;
-  }
+//############################################//
+//############# Float Utilities  ############//
+//###########################################//
 
-  &::after {
-    clear: both;
-  }
-}
-
-//Floats
 .pull-right {
   float: right;
 }
@@ -20,36 +10,139 @@
   float: left;
 }
 
-//Text alignments
+//############################################//
+//############# Text Utilities  ############//
+//###########################################//
 
-.text-right {
-  text-align: right;
+$texts: 'right', 'left', 'justify', 'center';
+
+@each $text in $texts {
+  .text-#{$text} {
+    text-align: #{$text};
+  }
 }
 
-.text-center {
-  text-align: center;
+//############################################//
+//############# Displays  Utilities #########//
+//###########################################//
+
+$displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table', 'none';
+
+@each $display in $displays {
+  .display-#{$display} {
+    display: #{$display};
+  }
 }
 
-.text-justify {
-  text-align: justify;
+//############################################//
+//############# Align Utilities #############//
+//###########################################//
+
+.align {
+  &.vertical {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.horizontal {
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+  }
+
+  &.center {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
-.text-left {
-  text-align: left;
-}
-
-//Vertical align
-
-.vertical-align {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-//Flex center
-
-.flex-center {
-  align-items: center;
+.align-flex {
   display: flex;
-  justify-content: center;
+
+  &.is-column {
+    flex-direction: column;
+
+    &.vertical {
+      justify-content: center;
+    }
+
+    &.vertical-end {
+      justify-content: flex-end;
+    }
+
+    &.horizontal {
+      align-items: center;
+    }
+
+    &.horizontal-end {
+      align-items: flex-end;
+    }
+  }
+
+  &.vertical:not(.is-column) {
+    align-items: center;
+
+    &.end {
+      justify-content: flex-end;
+    }
+  }
+
+  &.horizontal:not(.is-column) {
+    justify-content: center;
+
+    &.end {
+      align-items: flex-end;
+    }
+  }
+
+  &.center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.between {
+    justify-content: space-between;
+  }
+}
+
+//############################################//
+//####### Hide or Disable Utilities #########//
+//###########################################//
+
+.is-disabled {
+  pointer-events: none;
+}
+
+.is-unselectable {
+  user-select: none;
+}
+
+.is-hidden.is-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+//############################################//
+//####### Hide or Disable Utilities #########//
+//###########################################//
+
+.testmode {
+  * {
+    background: $test-color !important;
+  }
+}
+
+.bordermode {
+  * {
+    border: 1px solid $test-border !important;
+  }
 }

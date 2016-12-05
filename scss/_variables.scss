@@ -1,0 +1,26 @@
+//############################################//
+//# Customize Alom editing the variables  ###//
+//###########################################//
+
+$font-base: 16 !default;
+
+/// Base path for assets (fonts, images...),
+/// should not include trailing slash
+/// @access public
+/// @type String
+$asset-base-path: '../assets' !default;
+
+//Grid settings
+$number-of-columns: 12 !default;
+$offset-columns: $number-of-columns !default;
+$grid-break: 768px;
+
+//Responsive Breakpints
+$small: 768px;
+$medium: 1024px;
+$large: 1140px;
+$wide: 4096px;
+
+//Test
+$test-color: rgba(255, 0, 0, .1);
+$test-border: rgba(255, 0, 0, 1);

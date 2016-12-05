@@ -1,8 +1,87 @@
-$rem-base: 16 !default;
+//############################################//
+//######## Pixels to Rems Function  #########//
+//###########################################//
 
-@function px-to-rems($size: 24) {
-  $value: ($size / $rem-base) * 1rem;
-
-  @return $value;
+// !! Font base is declared in _variables file !! //
+@function px-to-rems($size) {
+  @return ($size / $font-base) * 1rem;
 }
 
+//############################################//
+//######### Pixels to ems Function  #########//
+//###########################################//
+
+@function px-to-ems($size) {
+  @return ($size / $font-base) * 1em;
+}
+
+//############################################//
+//##### Pixels to Percentage Function  ######//
+//###########################################//
+//Example: width: calc-percent(200,768);
+
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+//############################################//
+//##### Pixels to Percentage Function  ######//
+//###########################################//
+//Example background: image('logo.png');
+
+@function asset($type, $file) {
+  @return url($asset-base-path + '/' + $type + '/' + $file);
+}
+
+@function image($file) {
+  @return asset('images', $file);
+}
+
+//############################################//
+//####### Get next value on maps  ########/////
+//###########################################//
+
+@function next($map, $key, $fallback: null) {
+  $i: 0;
+  $key-index: false;
+
+  @each $map-key, $map-value in $map {
+    $i: $i + 1;
+
+    @if $map-key == $key {
+      $key-index: $i;
+    }
+
+    @if $i == $key-index + 1 {
+      @return $map-value;
+    }
+
+    @if $i == length($map) {
+      @return $map-value;
+    }
+
+  }
+}
+
+//############################################//
+//####### Get previus value on maps  ########//
+//###########################################//
+
+@function prev($map, $key, $fallback: false, $return: value) {
+  $i: 0;
+  $key-index: false;
+  @each $map-key, $map-value in $map {
+    $i: $i + 1;
+    @if $map-key == $key {
+      $key-index: $i;
+      $i: $i - 1;
+      @if $i > 0 {
+        @each $map-key, $map-value in $map {
+          $map2: (nth($map, $i));
+          @return nth($map2, 2);
+        }
+      }
+      @return $map-value;
+    }
+  }
+}

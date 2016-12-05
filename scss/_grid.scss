@@ -1,26 +1,7 @@
-//Grid
+//############################################//
+//################ Grid System ##############//
+//###########################################//
 
-//@variables
-//
-
-//Grid settings
-$number-of-columns: 12 !default;
-$offset-columns: $number-of-columns !default;
-
-//Row config
-$row-text-rendering: optimizespeed !default;
-
-//Stack columns
-$stack-column-separation: 2px !default;
-$stack-column-padding-right: 0 !default;
-$stack-column-padding-left: 0 !default;
-
-//Media
-$grid-max-width: 768px !default;
-
-//
-//@mixin
-//
 @mixin grid-columns($columns: $number-of-columns) {
   $column-width: 100 / $columns;
 
@@ -31,9 +12,6 @@ $grid-max-width: 768px !default;
   }
 }
 
-//
-//@mixin
-//
 @mixin grid-columns-offset($columns: $offset-columns) {
   $column-width: 100 / $columns;
 
@@ -50,25 +28,62 @@ $grid-max-width: 768px !default;
   @include grid-columns;
   @include grid-columns-offset;
   display: block;
-}
 
-//Borders and paddings are applied inside the div element
-//This prevents the columns to stack by a border or padding
-[class*="col-"] {
-  float: left;
-}
+  [class*="col-"] {
+    float: left;
 
-@include max-screen($grid-max-width) {
-  .row > [class*="col-"] {
-    margin-bottom: $stack-column-separation;
-    margin-left: 0;
-    padding-left: $stack-column-padding-left;
-    padding-right: $stack-column-padding-right;
-    width: 100%;
-  }
-
-  [class*="offset-"] {
-    margin-left: 0;
+    &.full-height {
+      height: 100%;
+    }
   }
 }
 
+
+@media screen and (max-width: $grid-break) {
+  .row:not(.fixed) {
+    [class*="col-"] {
+      width: 100%;
+    }
+
+    [class*="offset-"] {
+      margin-left: 0;
+    }
+  }
+}
+
+
+//############################################//
+//########### Flex Grid System ##############//
+//###########################################//
+
+.row-flex {
+  @include grid-columns;
+  @include grid-columns-offset;
+  display: flex;
+
+  [class*="col-"] {
+    display: inline-grid;
+    flex: none;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    &.full-height {
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $grid-break) {
+  .row-flex:not(.fixed) {
+    flex-direction: column;
+
+    [class*="col-"] {
+      flex: 1;
+      width: 100%;
+    }
+
+    [class*="offset-"] {
+      margin-left: 0;
+    }
+  }
+}

@@ -13,6 +13,8 @@ linters:
   ImportantRule:
     exclude:
       - 'scss/_mixins.scss'
+      - 'scss/_responsive.scss'
+      - 'scss/_utilities.scss'
   BorderZero:
     enabled: false
   Indentation:
