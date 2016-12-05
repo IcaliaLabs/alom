@@ -1,8 +1,8 @@
 
 ![Alom](alombanner.jpg)
 
-[![Code Climate](https://codeclimate.com/repos/5808049026e38000680068cb/badges/5c7f82ba462279a7ea59/gpa.svg)](https://codeclimate.com/repos/5808049026e38000680068cb/feed)
-[![Issue Count](https://codeclimate.com/repos/5808049026e38000680068cb/badges/5c7f82ba462279a7ea59/issue_count.svg)](https://codeclimate.com/repos/5808049026e38000680068cb/feed)
+[![Code Climate](https://codeclimate.com/repos/58376e28adabdb007400319e/badges/a3d9cf5c838bcca7b506/gpa.svg)](https://codeclimate.com/repos/58376e28adabdb007400319e/feed)
+[![Issue Count](https://codeclimate.com/repos/58376e28adabdb007400319e/badges/a3d9cf5c838bcca7b506/issue_count.svg)](https://codeclimate.com/repos/58376e28adabdb007400319e/feed)
 
 *Alom is the lighest, simplest framework ever, it will help you to kick up your project without interfering with any style, it is designed to make your life simpler and to help you deal with all the responsive stuff.*
 
