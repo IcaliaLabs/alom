@@ -20,7 +20,7 @@ To get started, checkout:
 
 ## Getting started
 
-Using Alom is extremely easy, we've provided three quick start options:
+Using Alom is extremely easy, we've provided two quick start options:
 
 * [Download the latest release.](https://raw.githubusercontent.com/IcaliaLabs/alom/master/dist/css/alom.css)
 * Clone the repo: `git clone git@github.com:IcaliaLabs/alom.`
