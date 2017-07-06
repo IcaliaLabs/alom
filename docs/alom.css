@@ -36,8 +36,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline; }
 
 a {
@@ -75,7 +73,6 @@ input[type="password"],
 input[type="button"],
 fieldset {
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none; }
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -367,15 +364,12 @@ svg:not(:root) {
       justify-content: flex-end; }
     .align-flex.is-column.horizontal {
       -webkit-box-align: center;
-      -ms-grid-row-align: center;
       align-items: center; }
     .align-flex.is-column.horizontal-end {
       -webkit-box-align: end;
-      -ms-grid-row-align: flex-end;
       align-items: flex-end; }
   .align-flex.vertical:not(.is-column) {
     -webkit-box-align: center;
-    -ms-grid-row-align: center;
     align-items: center; }
     .align-flex.vertical:not(.is-column).end {
       -webkit-box-pack: end;
@@ -385,11 +379,9 @@ svg:not(:root) {
     justify-content: center; }
     .align-flex.horizontal:not(.is-column).end {
       -webkit-box-align: end;
-      -ms-grid-row-align: flex-end;
       align-items: flex-end; }
   .align-flex.center {
     -webkit-box-align: center;
-    -ms-grid-row-align: center;
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center; }
@@ -402,7 +394,6 @@ svg:not(:root) {
 
 .is-unselectable {
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
 
