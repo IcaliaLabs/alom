@@ -82,6 +82,10 @@ $displays: 'block', 'flex', 'inline', 'inline-block', 'inline-flex', 'table', 'n
     }
   }
 
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
   &.vertical:not(.is-column) {
     align-items: center;
 
