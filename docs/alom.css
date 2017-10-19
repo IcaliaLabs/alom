@@ -368,6 +368,8 @@ svg:not(:root) {
     .align-flex.is-column.horizontal-end {
       -webkit-box-align: end;
       align-items: flex-end; }
+  .align-flex.wrap {
+    flex-wrap: wrap; }
   .align-flex.vertical:not(.is-column) {
     -webkit-box-align: center;
     align-items: center; }
