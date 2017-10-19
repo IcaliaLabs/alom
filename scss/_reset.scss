@@ -56,3 +56,18 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+a {
+  background-color: transparent;
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-text-decoration-skip: objects;
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: 0;
+    cursor: pointer;
+  }
+}
