@@ -1,25 +1,7 @@
-//############################################//
-//############# General Reset  ##############//
-//###########################################//
-
-* {
-	-webkit-tap-highlight-color: rgba(255,255,255,0);
-	-webkit-tap-highlight-color: transparent;
-	box-sizing: border-box;
-}
-
-*:before,
-*:after {
-	box-sizing: inherit;
-}
-
-html {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-	overflow-x: hidden;
-  overflow-y: scroll;
-}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -36,120 +18,36 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
 	vertical-align: baseline;
 }
 
-a {
-  background-color: transparent;
-  color: inherit;
-  display: inline-block;
-  text-decoration: none;
-  -webkit-text-decoration-skip: objects;
-
-  &:focus,
-  &:hover,
-  &:active {
-    outline: 0;
-    cursor: pointer;
-  }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
+body {
+	line-height: 1;
 }
 
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-//############################################//
-//############## Forms Reset  ###############//
-//###########################################//
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="button"],
-fieldset {
-	appearance: none;
-	&:focus {
-		outline: 0;
-	}
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-	margin: 0;
-	outline: 0;
-	padding: 0;
-}
-
-input::-ms-clear {
-    display: none;
-}
-
-input[type="number"],
-[type="search"] {
-	-moz-appearance: textfield;
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
-}
-
-button,
-input[type="submit"] {
-	outline: 0;
-	background: 0;
-
-	&:hover,
-	&:active,
-	&:focus {
-		cursor: pointer;
-	}
-}
-
-textarea {
-	border: 1px solid;
-  resize: none;
-  outline: 0;
-  overflow: auto;
-}
-
-//############################################//
-//############## Media Reset  ###############//
-//###########################################//
-
-
+ol,
 ul {
 	list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
 	quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
@@ -157,28 +55,4 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-
-img,
-embed,
-object,
-audio,
-video {
-  height: auto;
-  max-width: 100%;
-}
-
-iframe {
-	border: 0
-}
-
-svg:not(:root) {
-  overflow: hidden;
 }
