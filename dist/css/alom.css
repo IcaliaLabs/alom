@@ -73,6 +73,7 @@ input[type="password"],
 input[type="button"],
 fieldset {
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none; }
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -396,6 +397,7 @@ svg:not(:root) {
 
 .is-unselectable {
   -webkit-user-select: none;
+  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
 
