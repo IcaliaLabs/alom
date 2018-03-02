@@ -9,6 +9,8 @@ $breakpoints: (
     w: $wide // Wide Screens
 );
 
+$min-width: min-width;
+
 //############################################//
 //# Customize Alom editing the variables  ###//
 //###########################################//
@@ -36,17 +38,24 @@ $breakpoints: (
 //###########################################//
 @each $bp in map-keys($breakpoints) {
   .hide-on-#{$bp}-only {
-    @media screen and  (min-width: prev($breakpoints, #{$bp})) and (max-width: next($breakpoints, #{$bp})) {
+    @media screen and (min-width: prev($breakpoints, #{$bp})) and (max-width: next($breakpoints, #{$bp})) {
       display: none !important;
     }
   }
 }
+
 @each $bp in map-keys($breakpoints) {
   .show-on-#{$bp} {
-    visibility: hidden;
+    display: none;
 
-    @media screen and  (min-width: prev($breakpoints, #{$bp})) and (max-width: next($breakpoints, #{$bp})) {
-      visibility: visible;
+    @media screen and ($min-width: prev($breakpoints, #{$bp})) and (max-width: next($breakpoints, #{$bp})) {
+      display: block;
+    }
+
+    @if ($min-width != null) {
+      @media screen and (max-width: next($breakpoints, #{$bp})) {
+        display: block;
+      }
     }
   }
 }

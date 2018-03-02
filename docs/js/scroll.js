@@ -20,11 +20,9 @@ $(document).ready(function(){
 	var stick = function(e) {
 		var scrollTop = wrap.scrollTop();
 	  if (scrollTop >= navTop) {
-	  	console.log(scrollTop,navTop,'yes');  
 	    nav.addClass("sticky");
 	  } 
 	  else {
-	  	console.log(scrollTop,navTop,'no');
 	  	nav.removeClass("sticky");
 	  }
 	};
