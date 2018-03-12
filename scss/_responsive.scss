@@ -48,12 +48,14 @@ $min-width: min-width;
   .show-on-#{$bp} {
     display: none;
 
-    @media screen and ($min-width: prev($breakpoints, #{$bp})) and (max-width: next($breakpoints, #{$bp})) {
-      display: block;
+    @if ($min-width != null) {
+      @media screen and (max-width: $small) {
+        display: block;
+      }
     }
 
-    @if ($min-width != null) {
-      @media screen and (max-width: next($breakpoints, #{$bp})) {
+    @else {
+      @media screen and ($min-width: prev($breakpoints, #{$bp})) and (max-width: next($breakpoints, #{$bp})) {
         display: block;
       }
     }
